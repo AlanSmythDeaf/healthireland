@@ -34,18 +34,41 @@ def main_menu():
     
 
 def bmi():
+    """
+    Displays tsection called BMI
+    """
     print("Welcome to BMI")
 
     input("Press enter to return to menu\n")
     main_menu()
 
 def heart_ratio():
-    print("Welcome to BMI")
+    """
+    Displays section called Heart Ratio
+    """    
+    print("Welcome to Heart Ratio\n")
+    while True:
+        try:
+            user_input_heart = int(input("Please enter your age: "))
+            min_value = 0
+            max_value = 100
+            if min_value <= user_input_heart <= max_value:
+                heart_result = 206.9 - (0.67 * user_input_heart)
+                print(f"Your maximum heart rate result is {heart_result} beats per minute.\n")
+                break
+            else:
+                print(f"Please enter your age between {min_value} and {max_value}.\n")
+        except ValueError:
+            print("Invalid input, please enter a number.\n")
 
-    input("Press enter to return to menu\n")
+    input("Press enter to return to the main menu\n")
     main_menu()
 
+
 def waist_hip():
+    """
+    Displays section call waist to hip ratio
+    """
     print("Welcome to waist to hip ratio")
 
     input("Press enter to return to menu\n")
@@ -59,5 +82,10 @@ def how_it_work():
     input("Press enter to return to menu\n")
     main_menu()
 
+def main():
+    """
+    Runs necessary functions at the start of the program.
+    """
+    main_menu()
 
-main_menu()
+main()
