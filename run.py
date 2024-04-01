@@ -1,6 +1,4 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+
 
 def main_menu():
     """
@@ -19,9 +17,9 @@ def main_menu():
 
     while True:
         main_menu_ans = input("\n")
-        if main_menu_ans not in ("1", "2", "3", "4", "5"):
+        if main_menu_ans not in ("1", "2", "3", "4",):
             print("Invalid input.")
-            print("Please choose an option between 1 and 5.")
+            print("Please choose an option between 1 and 4.")
         else:
             break
 
@@ -33,12 +31,33 @@ def main_menu():
         waist_hip()
     elif main_menu_ans == ("4"):
         how_it_work()
+    
 
-def main():
-    """
-    Runs necessary functions at the start of the program.
-    """
+def bmi():
+    print("Welcome to BMI")
+
+    input("Press enter to return to menu\n")
+    main_menu()
+
+def heart_ratio():
+    print("Welcome to BMI")
+
+    input("Press enter to return to menu\n")
+    main_menu()
+
+def waist_hip():
+    print("Welcome to waist to hip ratio")
+
+    input("Press enter to return to menu\n")
+    main_menu()
+
+def how_it_work():
+    print("How this works")
+
+    print("explain how this works.\n")
+
+    input("Press enter to return to menu\n")
     main_menu()
 
 
-main()
+main_menu()
