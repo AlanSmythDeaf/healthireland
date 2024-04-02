@@ -32,14 +32,48 @@ def main_menu():
     elif main_menu_ans == ("4"):
         how_it_work()
     
-
 def bmi():
     """
-    Displays tsection called BMI
+    Calculates BMI based on user input for weight and height.
     """
-    print("Welcome to BMI")
+    print("Welcome to the BMI Index")
 
-    input("Press enter to return to menu\n")
+    # Input height in meters between 1.00 to 2.44
+    while True:
+        try:
+            height = float(input("Please enter your height in meters: "))
+            if 1.00 <= height <= 2.44:
+                break
+            else:
+                print(f"Please enter your height in meters between 1.00 and 2.44.")
+        except ValueError:
+            print("Input error, please enter a valid number for height.")
+
+    # Input weight in kilograms between 35 to 199
+    while True:
+        try:
+            weight = int(input("Please enter your weight in kilograms: "))
+            if 35 <= weight < 199:
+                break
+            else:
+                print(f"Please enter your weight in kg between 35 and 199.")
+        except ValueError:
+            print("Input error, please enter a valid number for weight.")
+
+    # Calculate BMI
+    bmi = weight / (height ** 2)
+
+    # Determine BMI category user are in
+    if bmi <= 18.5:
+        print(f"Your BMI is {bmi:.2f}, which means you are underweight.\n")
+    elif 18.5 < bmi < 25:
+        print(f"Your BMI is {bmi:.2f}, which means you are normal.\n")
+    elif 25 <= bmi < 30:
+        print(f"Your BMI is {bmi:.2f}, which means you are overweight.\n")
+    else:
+        print(f"Your BMI is {bmi:.2f}, which means you are obese.\n")
+ 
+    input("Press enter to return to the main menu\n")
     main_menu()
 
 def heart_ratio():
@@ -47,6 +81,7 @@ def heart_ratio():
     Displays section called Heart Ratio
     """    
     print("Welcome to Heart Ratio\n")
+     # Input age in numbers between 0 - 100
     while True:
         try:
             user_input_heart = int(input("Please enter your age: "))
@@ -77,9 +112,17 @@ def waist_hip():
 def how_it_work():
     print("How this works")
 
-    print("explain how this works.\n")
+    print("BMI Index.\n")
+    print("Calculate your body mass index to find out if you are a healthy weight for your height.")
+    print("Not sure about your height in Meter, you can use the link below from Meters to Feet")
+    print("https://www.unitconverters.net/length/feet-to-meters.htm\n")
+
+    print("Heart.\n")
+    print("Your target heart rate is a range of numbers that reflect how fast your heart should be beating when you exercise.")
 
     input("Press enter to return to menu\n")
+
+
     main_menu()
 
 def main():
