@@ -72,7 +72,7 @@ def bmi():
         print(f"Your BMI is {bmi:.2f}, which means you are overweight.\n")
     else:
         print(f"Your BMI is {bmi:.2f}, which means you are obese.\n")
- 
+
     input("Press enter to return to the main menu\n")
     main_menu()
 
@@ -106,6 +106,36 @@ def waist_hip():
     """
     print("Welcome to waist to hip ratio")
 
+    gender_choice = input("Please chose your gender? (Type 'male' or 'female'): ")
+
+    if gender_choice.lower() == 'male':
+        m_waist = float(input("Please enter your waist: "))
+        m_hip = float(input("Please enter your hip: "))
+        male_waist_to_hip = m_waist / m_hip
+    elif gender_choice.lower() == 'female':
+        fm_waist = float(input("Please enter your waist: "))
+        fm_hip = float(input("Please enter your hip: "))
+        female_waist_to_hip = fm_waist / fm_hip
+    else:
+        print("Invalid choice. Please enter 'male' or 'female'.")
+        return
+
+    if gender_choice == "male":
+        if male_waist_to_hip <= 0.91:
+            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in the low-risk category.")
+        elif 0.92 < male_waist_to_hip < 0.98:
+            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in the medium-risk category.")
+        else:
+            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in the high-risk category.")
+
+    if gender_choice =="female":
+        if female_waist_to_hip <= 0.81:
+            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in the low-risk category.")
+        elif 0.82 < female_waist_to_hip < 0.89:
+            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in the medium-risk category.")
+        else:
+            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in the high-risk category.")
+
     input("Press enter to return to menu\n")
     main_menu()
 
@@ -130,5 +160,6 @@ def main():
     Runs necessary functions at the start of the program.
     """
     main_menu()
+    bmi()
 
 main()
