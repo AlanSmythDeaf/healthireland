@@ -96,7 +96,7 @@ def heart_ratio():
         except ValueError:
             print("Invalid input, please enter a number.\n")
 
-    input("Press enter to return to the main menu\n")
+    input("To return to the main menu, please press enter\n")
     main_menu()
 
 
@@ -136,7 +136,7 @@ def waist_hip():
         else:
             print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in the high-risk category.")
 
-    input("Press enter to return to menu\n")
+    input("To return to the main menu, please press enter\n")
     main_menu()
 
 def how_it_work():
@@ -150,7 +150,7 @@ def how_it_work():
     print("Heart.\n")
     print("Your target heart rate is a range of numbers that reflect how fast your heart should be beating when you exercise.")
 
-    input("Press enter to return to menu\n")
+    input("To return to the main menu, please press enter\n")
 
 
     main_menu()
