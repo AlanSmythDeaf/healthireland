@@ -140,19 +140,33 @@ def waist_hip():
     main_menu()
 
 def how_it_work():
-    print("How this works")
+    print("How this works \n")
 
-    print("BMI Index.\n")
-    print("Calculate your body mass index to find out if you are a healthy weight for your height.")
-    print("Not sure about your height in Meter, you can use the link below from Meters to Feet")
-    print("https://www.unitconverters.net/length/feet-to-meters.htm\n")
+    print("------------")
+    print("Body Mass Index\n")
+    print("Calculate your body mass index to find out")
+    print("if you are a healthy weight area.")
+    print("Not sure about your weight in kilogram or height in Meter,")
+    print("you can use the the converter from your preference")
+    print("https://www.unitconverters.net/length-converter.html")
+    print("------------\n")
 
+    print("------------")
     print("Heart.\n")
-    print("Your target heart rate is a range of numbers that reflect how fast your heart should be beating when you exercise.")
+    print("Your target heart rate is a range of numbers that")
+    print("reflect how fast your heart should be beating when you exercise.")
+    print("------------\n")
+
+    print("------------")
+    print("Waist to Hip Ratio\n")
+    print("compares your waist measurement to your hip measurement")
+    print("Higher ratios can mean you have more fat around your waist.")
+    print("Not sure about your waist or hip in centremeters, you can")
+    print("use the the converter from your preference to cm")
+    print("https://www.unitconverters.net/length-converter.html")
+    print("------------\n")
 
     input("To return to the main menu, please press enter\n")
-
-
     main_menu()
 
 def main():
@@ -160,6 +174,5 @@ def main():
     Runs necessary functions at the start of the program.
     """
     main_menu()
-    bmi()
 
 main()
