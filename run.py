@@ -1,10 +1,11 @@
-
+import os
 
 def main_menu():
     """
     Displays the main menu options for the user
     to select in order to navigate the application.
     """
+    clear_tml()
     print("---------------------------")
     print("Welcome to Health Ireland")
     print("---------------------------")
@@ -36,6 +37,7 @@ def bmi():
     """
     Calculates BMI based on user input for weight and height.
     """
+    clear_tml()
     print("Welcome to the BMI Index")
 
     # Input height in meters between 1.00 to 2.44
@@ -79,7 +81,8 @@ def bmi():
 def heart_ratio():
     """
     Displays section called Heart Ratio
-    """    
+    """
+    clear_tml()    
     print("Welcome to Heart Ratio\n")
      # Input age in numbers between 0 - 100
     while True:
@@ -104,6 +107,7 @@ def waist_hip():
     """
     Displays section call waist to hip ratio
     """
+    clear_tml()
     print("Welcome to waist to hip ratio")
 
     gender_choice = input("Please chose your gender? (Type 'male' or 'female'): ")
@@ -140,6 +144,7 @@ def waist_hip():
     main_menu()
 
 def how_it_work():
+    clear_tml()
     print("How this works \n")
 
     print("------------")
@@ -168,6 +173,12 @@ def how_it_work():
 
     input("To return to the main menu, please press enter\n")
     main_menu()
+
+def clear_tml():
+    """
+    Clears the terminal when called.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
 
 def main():
     """
