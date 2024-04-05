@@ -1,4 +1,7 @@
 import os
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 def main_menu():
     """
@@ -19,11 +22,10 @@ def main_menu():
     while True:
         main_menu_ans = input("\n")
         if main_menu_ans not in ("1", "2", "3", "4",):
-            print("Invalid input.")
-            print("Please choose an option between 1 and 4.")
+            print(f"{Fore.RED}Invalid input.")
+            print("Please choose a number between 1 to 4.")
         else:
             break
-
     if main_menu_ans == ("1"):
         bmi()
     elif main_menu_ans == ("2"):
@@ -47,9 +49,9 @@ def bmi():
             if 1.00 <= height <= 2.44:
                 break
             else:
-                print(f"Please enter your height in meters between 1.00 and 2.44.")
+                print(f"{Fore.RED}Please enter your height in meters between 1.00 and 2.44.")
         except ValueError:
-            print("Input error, please enter a valid number for height.")
+            print(f"{Fore.RED}Input error, please enter a valid number for height.")
 
     # Input weight in kilograms between 35 to 199
     while True:
@@ -58,9 +60,9 @@ def bmi():
             if 35 <= weight < 199:
                 break
             else:
-                print(f"Please enter your weight in kg between 35 and 199.")
+                print(f"{Fore.RED}Please enter your weight in kg between 35 and 199.")
         except ValueError:
-            print("Input error, please enter a valid number for weight.")
+            print(f"{Fore.RED}Input error, please enter a valid number for weight.")
 
     # Calculate BMI
     bmi = weight / (height ** 2)
@@ -95,9 +97,9 @@ def heart_ratio():
                 print(f"Your maximum heart rate result is {heart_result} beats per minute.\n")
                 break
             else:
-                print(f"Please enter your age between {min_value} and {max_value}.\n")
+                print(f"{Fore.RED}Please enter your age between {min_value} and {max_value}.\n")
         except ValueError:
-            print("Invalid input, please enter a number.\n")
+            print(f"{Fore.RED}Invalid input, please enter a number.\n")
 
     input("To return to the main menu, please press enter\n")
     main_menu()
@@ -121,9 +123,9 @@ def waist_hip():
         fm_hip = float(input("Please enter your hip: "))
         female_waist_to_hip = fm_waist / fm_hip
     else:
-        print("Invalid choice. Please enter 'male' or 'female'.")
-        return
-
+        print(f"{Fore.RED}Invalid choice. Please enter 'male' or 'female'.")
+        waist_hip()
+    
     if gender_choice == "male":
         if male_waist_to_hip <= 0.91:
             print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in the low-risk category.")
@@ -147,29 +149,29 @@ def how_it_work():
     clear_tml()
     print("How this works \n")
 
-    print("------------")
+    print(f"{Fore.GREEN}------------")
     print("Body Mass Index\n")
     print("Calculate your body mass index to find out")
     print("if you are a healthy weight area.")
     print("Not sure about your weight in kilogram or height in Meter,")
     print("you can use the the converter from your preference")
     print("https://www.unitconverters.net/length-converter.html")
-    print("------------\n")
+    print(f"{Fore.GREEN}------------\n")
 
-    print("------------")
+    print(f"{Fore.GREEN}------------")
     print("Heart.\n")
     print("Your target heart rate is a range of numbers that")
     print("reflect how fast your heart should be beating when you exercise.")
-    print("------------\n")
+    print(f"{Fore.GREEN}------------\n")
 
-    print("------------")
+    print(f"{Fore.GREEN}------------")
     print("Waist to Hip Ratio\n")
     print("compares your waist measurement to your hip measurement")
     print("Higher ratios can mean you have more fat around your waist.")
     print("Not sure about your waist or hip in centremeters, you can")
     print("use the the converter from your preference to cm")
     print("https://www.unitconverters.net/length-converter.html")
-    print("------------\n")
+    print(f"{Fore.GREEN}------------\n")
 
     input("To return to the main menu, please press enter\n")
     main_menu()
