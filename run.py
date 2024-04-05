@@ -69,13 +69,15 @@ def bmi():
 
     # Determine BMI category user are in
     if bmi <= 18.5:
-        print(f"Your BMI is {bmi:.2f}, which means you are underweight.\n")
+        print(f"Your BMI is {bmi:.2f} - which means you are underweight.")
     elif 18.5 < bmi < 25:
-        print(f"Your BMI is {bmi:.2f}, which means you are normal.\n")
+        print(f"Your BMI is {bmi:.2f} - which means you are normal.")
     elif 25 <= bmi < 30:
-        print(f"Your BMI is {bmi:.2f}, which means you are overweight.\n")
+        print(f"Your BMI is {bmi:.2f} - which means you are overweight.")
     else:
-        print(f"Your BMI is {bmi:.2f}, which means you are obese.\n")
+        print(f"Your BMI is {bmi:.2f} - which means you are obese.")
+    
+    print(f"{Back.BLUE}0 - Underweight - 18.5 {Back.GREEN} 18.6 - Healthy - 24 {Back.YELLOW} 25 - Overweight - 30 {Back.RED} 30.1 - obese - \n")
 
     input("Press enter to return to the main menu\n")
     main_menu()
