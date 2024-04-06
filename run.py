@@ -114,35 +114,63 @@ def waist_hip():
     clear_tml()
     print("Welcome to waist to hip ratio")
 
-    gender_choice = input("Please chose your gender? (Type 'male' or 'female'): ")
+     # Input waist between 50 to 300
+    while True:
+        try:
+            waist = float(input("Please enter your waist measurement in cm: "))
+            if 50 <= waist <= 300:
+                break
+            else:
+                print(f"{Fore.RED}Please enter your waist in meters between 50 and 300.")
+        except ValueError:
+            print(f"{Fore.RED}Input error, please enter a valid number for waist.")
+
+    # Input hip between 50 to 300
+    while True:
+        try:
+            hip = int(input("Please enter your hip measurement in cm: "))
+            if 50 <= hip < 300:
+                break
+            else:
+                print(f"{Fore.RED}Please enter your hip in between 50 and 300.")
+        except ValueError:
+            print(f"{Fore.RED}Input error, please enter a valid number for hip.")
+
+    while True:
+        try:
+            gender_choice = input("Please choose your gender ('male' or 'female'): ").lower()
+            if gender_choice in ["male", "female"]:
+                break
+            else:
+                print(f"{Fore.RED}Invalid input. Please enter 'male' or 'female")
+        except ValueError:
+            print(f"{Fore.RED}Input error")
 
     if gender_choice.lower() == 'male':
-        m_waist = float(input("Please enter your waist: "))
-        m_hip = float(input("Please enter your hip: "))
-        male_waist_to_hip = m_waist / m_hip
+        male_waist_to_hip = waist / hip
     elif gender_choice.lower() == 'female':
-        fm_waist = float(input("Please enter your waist: "))
-        fm_hip = float(input("Please enter your hip: "))
-        female_waist_to_hip = fm_waist / fm_hip
+        female_waist_to_hip = waist / hip
     else:
         print(f"{Fore.RED}Invalid choice. Please enter 'male' or 'female'.")
         waist_hip()
     
     if gender_choice == "male":
         if male_waist_to_hip <= 0.91:
-            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in the low-risk category.")
+            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
         elif 0.92 < male_waist_to_hip < 0.98:
-            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in the medium-risk category.")
+            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk")
         else:
-            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in the high-risk category.")
+            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
+            print(f"{Back.GREEN}0 - Low - 0.91 {Back.YELLOW} 0.92 - Medium - 0.98 {Back.RED} 0.99 - High - 6.00 \n")
 
     if gender_choice =="female":
         if female_waist_to_hip <= 0.81:
-            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in the low-risk category.")
+            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
         elif 0.82 < female_waist_to_hip < 0.89:
-            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in the medium-risk category.")
+            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk.")
         else:
-            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in the high-risk category.")
+            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
+            print(f"{Back.GREEN}0 - Low - 0.81 {Back.YELLOW} 0.82 - Medium - 0.89 {Back.RED} 0.90 - High - 6.00 \n")
 
     input("To return to the main menu, please press enter\n")
     main_menu()
