@@ -161,7 +161,8 @@ def waist_hip():
             print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk")
         else:
             print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
-            print(f"{Back.GREEN}0 - Low - 0.91 {Back.YELLOW} 0.92 - Medium - 0.98 {Back.RED} 0.99 - High - 6.00 \n")
+            
+        print(f"{Back.GREEN}0 - Low - 0.91 {Back.YELLOW} 0.92 - Medium - 0.98 {Back.RED} 0.99 - High - 6.00 \n")
 
     if gender_choice =="female":
         if female_waist_to_hip <= 0.81:
@@ -170,7 +171,8 @@ def waist_hip():
             print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk.")
         else:
             print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
-            print(f"{Back.GREEN}0 - Low - 0.81 {Back.YELLOW} 0.82 - Medium - 0.89 {Back.RED} 0.90 - High - 6.00 \n")
+            
+        print(f"{Back.GREEN}0 - Low - 0.81 {Back.YELLOW} 0.82 - Medium - 0.89 {Back.RED} 0.90 - High - 6.00 \n")
 
     input("To return to the main menu, please press enter\n")
     main_menu()
