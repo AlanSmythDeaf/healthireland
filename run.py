@@ -9,15 +9,15 @@ def main_menu():
     to select in order to navigate the application.
     """
     clear_tml()
-    print("---------------------------")
+    print("-------------------------")
     print("Welcome to Health Ireland")
-    print("---------------------------")
-    print("Please select an option below.\n")
+    print("-------------------------")
+    print("Please select an option below and press enter.\n")
 
-    print("(1) Body Mass Index BMI.")
-    print("(2) Heart Rate.")
-    print("(3) Waist to Hip Ratio ")
-    print("(4) How it works.")
+    print("(1) Body Mass Index BMI")
+    print("(2) Heart Rate")
+    print("(3) Waist to Hip Ratio")
+    print("(4) How it works")
 
     while True:
         main_menu_ans = input("\n")
@@ -40,8 +40,9 @@ def bmi():
     Calculates BMI based on user input for weight and height.
     """
     clear_tml()
+    print("------------------------")
     print("Welcome to the BMI Index")
-
+    print("------------------------ \n")
     # Input height in meters between 1.00 to 2.44
     while True:
         try:
@@ -67,7 +68,7 @@ def bmi():
     # Calculate BMI
     bmi = weight / (height ** 2)
 
-    # Determine BMI category user are in
+    # Determine which user are in BMI area
     if bmi <= 18.5:
         print(f"Your BMI is {bmi:.2f} - which means you are underweight.")
     elif 18.5 < bmi < 25:
@@ -77,7 +78,7 @@ def bmi():
     else:
         print(f"Your BMI is {bmi:.2f} - which means you are obese.")
     
-    print(f"{Back.BLUE}0 - Underweight - 18.5 {Back.GREEN} 18.6 - Healthy - 24 {Back.YELLOW} 25 - Overweight - 30 {Back.RED} 30.1 - obese - \n")
+    print(f"{Back.BLUE}0 -Underweight- 18.5 {Back.GREEN} 18.6 -Healthy- 24 {Back.YELLOW} 25 -Overweight- 30 {Back.RED} 30.1 -obese- \n")
 
     input("Press enter to return to the main menu\n")
     main_menu()
