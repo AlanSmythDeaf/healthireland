@@ -57,7 +57,7 @@ def bmi():
     # Input weight in kilograms between 35 to 199
     while True:
         try:
-            weight = int(input("Please enter your weight in kilograms: "))
+            weight = float(input("Please enter your weight in kilograms: "))
             if 35 <= weight < 199:
                 break
             else:
