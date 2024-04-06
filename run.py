@@ -43,6 +43,7 @@ def bmi():
     print("------------------------")
     print(f"{Style.BRIGHT}Welcome to the BMI Index")
     print("------------------------ \n")
+
     # Input height in meters between 1.00 to 2.44
     while True:
         try:
@@ -91,7 +92,8 @@ def heart_ratio():
     print("----------------------")
     print(f"{Style.BRIGHT}Welcome to Heart Ratio")
     print("----------------------\n")
-     # Input age in numbers between 0 - 100
+
+    # Input age in numbers between 0 - 100
     while True:
         try:
             user_input_heart = int(input("Please enter your age: "))
@@ -118,7 +120,8 @@ def waist_hip():
     print("-----------------------------")
     print(f"{Style.BRIGHT}Welcome to waist to hip ratio")
     print("-----------------------------\n")
-     # Input waist between 50 to 300
+    
+    # Input waist between 50 to 300
     while True:
         try:
             waist = float(input("Please enter your waist measurement in cm: "))
@@ -140,6 +143,7 @@ def waist_hip():
         except ValueError:
             print(f"{Fore.RED}Input error, please enter a valid number for hip.")
 
+    # Input male or female
     while True:
         try:
             gender_choice = input("Please choose your gender ('male' or 'female'): ").lower()
@@ -150,6 +154,7 @@ def waist_hip():
         except ValueError:
             print(f"{Fore.RED}Input error")
 
+    # Calculate waist to hip ratio for male and female
     if gender_choice.lower() == 'male':
         male_waist_to_hip = waist / hip
     elif gender_choice.lower() == 'female':
@@ -158,6 +163,7 @@ def waist_hip():
         print(f"{Fore.RED}Invalid choice. Please enter 'male' or 'female'.")
         waist_hip()
     
+    # Determine the selection male in which waist to hip area
     if gender_choice == "male":
         if male_waist_to_hip <= 0.91:
             print(f"\nYour waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
@@ -168,6 +174,7 @@ def waist_hip():
             
         print(f"{Back.GREEN}0 - Low - 0.91 {Back.YELLOW} 0.92 - Medium - 0.98 {Back.RED} 0.99 - High - 6.00 \n")
 
+    # Determine the selection female in which waist to hip area
     if gender_choice =="female":
         if female_waist_to_hip <= 0.81:
             print(f"\nYour waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
@@ -182,6 +189,10 @@ def waist_hip():
     main_menu()
 
 def how_it_work():
+    """
+    Displays section how it works
+    """
+    # Explaing how each section works
     clear_tml()
     print("--------------")
     print(f"{Style.BRIGHT}How this works")
