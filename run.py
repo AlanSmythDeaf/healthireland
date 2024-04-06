@@ -10,8 +10,8 @@ def main_menu():
     """
     clear_tml()
     print("-------------------------")
-    print("Welcome to Health Ireland")
-    print("-------------------------")
+    print(f"{Style.BRIGHT}Welcome to Health Ireland")
+    print("-------------------------\n")
     print("Please select an option below and press enter.\n")
 
     print("(1) Body Mass Index BMI")
@@ -41,7 +41,7 @@ def bmi():
     """
     clear_tml()
     print("------------------------")
-    print("Welcome to the BMI Index")
+    print(f"{Style.BRIGHT}Welcome to the BMI Index")
     print("------------------------ \n")
     # Input height in meters between 1.00 to 2.44
     while True:
@@ -70,17 +70,17 @@ def bmi():
 
     # Determine which user are in BMI area
     if bmi <= 18.5:
-        print(f"Your BMI is {bmi:.2f} - which means you are underweight.")
+        print(f"\nYour BMI is {bmi:.2f} - which means you are underweight.")
     elif 18.5 < bmi < 25:
-        print(f"Your BMI is {bmi:.2f} - which means you are normal.")
+        print(f"\nYour BMI is {bmi:.2f} - which means you are normal.")
     elif 25 <= bmi < 30:
-        print(f"Your BMI is {bmi:.2f} - which means you are overweight.")
+        print(f"\nYour BMI is {bmi:.2f} - which means you are overweight.")
     else:
-        print(f"Your BMI is {bmi:.2f} - which means you are obese.")
+        print(f"\nYour BMI is {bmi:.2f} - which means you are obese.")
     
-    print(f"{Back.BLUE}0 -Underweight- 18.5 {Back.GREEN} 18.6 -Healthy- 24 {Back.YELLOW} 25 -Overweight- 30 {Back.RED} 30.1 -obese- \n")
+    print(f"{Back.BLUE}0 -Underweight- 18.5 {Back.GREEN} 18.6 -Healthy- 24 {Back.YELLOW} 25 -Overweight- 30 {Back.RED} 30.1 -obese- 302 \n")
 
-    input("Press enter to return to the main menu\n")
+    input("To return to the main menu, please press enter\n")
     main_menu()
 
 def heart_ratio():
@@ -88,16 +88,18 @@ def heart_ratio():
     Displays section called Heart Ratio
     """
     clear_tml()    
-    print("Welcome to Heart Ratio\n")
+    print("----------------------")
+    print(f"{Style.BRIGHT}Welcome to Heart Ratio")
+    print("----------------------\n")
      # Input age in numbers between 0 - 100
     while True:
         try:
             user_input_heart = int(input("Please enter your age: "))
-            min_value = 0
+            min_value = 1
             max_value = 100
             if min_value <= user_input_heart <= max_value:
                 heart_result = 206.9 - (0.67 * user_input_heart)
-                print(f"Your maximum heart rate result is {heart_result} beats per minute.\n")
+                print(f"\nYour maximum heart rate result is {heart_result} beats per minute.\n")
                 break
             else:
                 print(f"{Fore.RED}Please enter your age between {min_value} and {max_value}.\n")
@@ -113,8 +115,9 @@ def waist_hip():
     Displays section call waist to hip ratio
     """
     clear_tml()
-    print("Welcome to waist to hip ratio")
-
+    print("-----------------------------")
+    print(f"{Style.BRIGHT}Welcome to waist to hip ratio")
+    print("-----------------------------\n")
      # Input waist between 50 to 300
     while True:
         try:
@@ -157,21 +160,21 @@ def waist_hip():
     
     if gender_choice == "male":
         if male_waist_to_hip <= 0.91:
-            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
+            print(f"\nYour waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
         elif 0.92 < male_waist_to_hip < 0.98:
-            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk")
+            print(f"\nYour waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk")
         else:
-            print(f"Your waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
+            print(f"\nYour waist-to-hip ratio is {male_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
             
         print(f"{Back.GREEN}0 - Low - 0.91 {Back.YELLOW} 0.92 - Medium - 0.98 {Back.RED} 0.99 - High - 6.00 \n")
 
     if gender_choice =="female":
         if female_waist_to_hip <= 0.81:
-            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
+            print(f"\nYour waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.GREEN}low-risk.")
         elif 0.82 < female_waist_to_hip < 0.89:
-            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk.")
+            print(f"\nYour waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.YELLOW}medium-risk.")
         else:
-            print(f"Your waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
+            print(f"\nYour waist-to-hip ratio is {female_waist_to_hip:.2f}, which means you are in {Fore.RED}high-risk.")
             
         print(f"{Back.GREEN}0 - Low - 0.81 {Back.YELLOW} 0.82 - Medium - 0.89 {Back.RED} 0.90 - High - 6.00 \n")
 
@@ -180,31 +183,31 @@ def waist_hip():
 
 def how_it_work():
     clear_tml()
-    print("How this works \n")
+    print("--------------")
+    print(f"{Style.BRIGHT}How this works")
+    print("--------------\n")
 
-    print(f"{Fore.GREEN}------------")
-    print("Body Mass Index\n")
-    print("Calculate your body mass index to find out")
-    print("if you are a healthy weight area.")
+    print(f"{Fore.GREEN}----------------------------------------------------------")
+    print(f"{Style.BRIGHT}(1) Body Mass Index\n")
+    print("Calculate your body mass index")
     print("Not sure about your weight in kilogram or height in Meter,")
     print("you can use the the converter from your preference")
     print("https://www.unitconverters.net/length-converter.html")
-    print(f"{Fore.GREEN}------------\n")
+    print(f"{Fore.GREEN}----------------------------------------------------------\n")
 
-    print(f"{Fore.GREEN}------------")
-    print("Heart.\n")
-    print("Your target heart rate is a range of numbers that")
-    print("reflect how fast your heart should be beating when you exercise.")
-    print(f"{Fore.GREEN}------------\n")
+    print(f"{Fore.GREEN}----------------------------------------------------------")
+    print(f"{Style.BRIGHT}(2) Heart\n")
+    print("Your target heart rate is the maximum heart rate that")
+    print("that it should be beating per minutes.")
+    print(f"{Fore.GREEN}----------------------------------------------------------\n")
 
-    print(f"{Fore.GREEN}------------")
-    print("Waist to Hip Ratio\n")
-    print("compares your waist measurement to your hip measurement")
-    print("Higher ratios can mean you have more fat around your waist.")
-    print("Not sure about your waist or hip in centremeters, you can")
-    print("use the the converter from your preference to cm")
+    print(f"{Fore.GREEN}----------------------------------------------------------")
+    print(f"{Style.BRIGHT}(3) Waist to Hip Ratio\n")
+    print("Compares your waist measurement to your hip measurement,")
+    print("not sure about your waist or hip in centremeters")
+    print("you can use the the converter from your preference")
     print("https://www.unitconverters.net/length-converter.html")
-    print(f"{Fore.GREEN}------------\n")
+    print(f"{Fore.GREEN}-----------------------------------------------------------\n")
 
     input("To return to the main menu, please press enter\n")
     main_menu()
