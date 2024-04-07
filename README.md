@@ -5,7 +5,7 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/AlanSmythDeaf/healthireland)](https://github.com/AlanSmythDeaf/healthireland)
 
 
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/amiresponsive.png)
 
 source: [amiresponsive](https://ui.dev/amiresponsive?url=https://healthireland-1ca000fe5f73.herokuapp.com)
 
@@ -22,7 +22,6 @@ There were many options to chose from project, what I wanted was to have user to
 ### Returning Site Users
 
 - As a returning site user, I would like to know where to go.
-- ?????
 
 ## Features
 
@@ -31,42 +30,62 @@ There were many options to chose from project, what I wanted was to have user to
 - **Main Menu**
 
     - This is the first page when it's loaded, with the word health ireland and present the user with four options to chose from.
+    - 1) Body Mass Index 
+    - 2) Heart Rate
+    - 3) Waist to Hip Ratio
+    - 4) How it works
 
-![screenshot](documentation/features/feature01.png)
+| Start|  |  
+| --- | --- | 
+| ![screenshot](documentation/features/main-menu.png) | 
 
 - **Body Mass Index BMI**
 
     - BMI page, 
-    - It ask the user to enter height in meters, if the user enter letter it gives an invalid input also the height needs to be between 1.00 to 2.44
-    - Ask the user to to enter weight in KG, needs to be 35 to 199, if the user enter a letter or number that not between 35 to 199 it gives an invalid input
+    - It ask the user to enter height in meters, needs to be between 1.00 to 2.44, if the user enter the number outside those numbers or enter a letter it gives an invalid input
+    - Ask the user to to enter weight in KG, needs to be 35 to 199, if the user enter the number outside those numbers or enter a letter it gives an invalid input
     - Once the two input are correct it will display the answer what weight catergory
+    - To return to the main menu, the user must press enter
     
+| Start | End |  
+| --- | --- | 
+| ![screenshot](documentation/features/bmi-page.png) | ![screenshot](documentation/features/bmi-page-error.png) |
 
-![screenshot](documentation/features/feature02.png)
 
 - **Heart Rate**
 
     - Heart Rate page  
-    - It ask the user to enter your age
+    - It ask the user to enter your age, it must be betweem 1 to 100
     - if the user enter a letter or number that not between 1 to 100 it gives an invalid output
+    - Once the input is correct it will display the answer heart rate
+    - To return to the main menu, the user must press enter
     
+| Start | End |  
+| --- | --- | 
+| ![screenshot](documentation/features/heart-page.png) | ![screenshot](documentation/features/heart-page-error.png) |
 
-![screenshot](documentation/features/feature03.png)
 
 - **Waist to Hip Ratio**
 
-    - Waist to Hip page  
+    - Waist to Hip page
+    - It ask the user to enter height in meters, needs to be between 30 to 300, if the user enter the number outside those numbers or enter a letter it gives an invalid input      
+    - It ask for waist measurement in cm, eeds to be between 30 to 300, if the user enter the number outside those numbers or enter a letter it gives an invalid input 
     - It ask the user to enter gender male or female
     - if the user enter a letter or number that is not male or female it gives an invalid output
+    - Once the three input are correct it will display the answer what waist to hip ratio catergory
+    - To return to the main menu, the user must press enter
 
-![screenshot](documentation/features/feature03.png)
+| Start | End |  
+| --- | --- | 
+| ![screenshot](documentation/features/waist-page.png) | ![screenshot](documentation/features/waist-page-error.png) |
 
 - **How it works**
 
     - How it works page
     - This explains how the Health Ireland page works, giving examples on each section
+    - To return to the main menu, the user must press enter
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/how-page.png)
 
 ### Future Features
 
@@ -99,7 +118,7 @@ To follow best practice, a flowchart was created using the
 
 Below is the flowchart of the main process of this Python program. It shows the entire cycle of the program.
 
-![screenshot](documentation/flowchart.png) - HAVE THIS
+![screenshot](documentation/flow-chart.png)
 
 ### Functions
 
@@ -226,10 +245,6 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/AlanSmythDeaf/healthireland)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
-
-### Local VS Deployment
-
-At the end 
 
 ## Credits
 
