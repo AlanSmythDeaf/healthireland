@@ -107,7 +107,7 @@ There were many options to chose from project, what I wanted was to have user to
 - [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
 - [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
 - [![Canva](https://img.shields.io/badge/Canva-grey?logo=canva&logoColor=00C4CC)](https://www.canva.com/p/canvawireframes) used for creating flowchart.
-- [![ChatGPT]()](https://copilot.microsoft.com/) used to help debug, troubleshoot, and explain things.
+- [![CoPilot](https://img.shields.io/badge/CoPilot-grey?logo=chromatic&logoColor=75A99C)](https://www.canva.com/p/canvawireframes) used for creating flowchart.
 
 ## Data Model
 
@@ -255,8 +255,8 @@ You can fork this repository by using the following steps:
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | tool to help generate the Markdown files |
 | [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/) | how to wrtie better git commit |
 | [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | Colormama for the text |
-| [Code-Institute](https://codeinstitute.net/ie/) | Understanding???? |
-| [Doctor Diary](https://github.com/Tony118g/doctor-diary/tree/main) | Love Sandwiches |
+| [Code-Institute](https://codeinstitute.net/ie/) | Love Sandwiches |
+| [Doctor Diary](https://github.com/Tony118g/doctor-diary/tree/main) | Inspiration from anoter student project |
 | [NHS](https://www.nhs.uk/health-assessment-tools/) | Tools for the health assessment |
 | [Stack Flow](https://stackoverflow.com/) | Issues with python code |
 
