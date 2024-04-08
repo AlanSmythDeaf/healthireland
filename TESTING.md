@@ -77,6 +77,11 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Expect it to display the information on how the Health Ireland works and when pressing letter or number i expect not to affect when pressing enter, when pressing enter while it's blank expect to return to main menu | Test | Result | Test concluded and passed |![screenshot](documentation/testing/how.png) |
 
 ## Bugs
+There were bugs throughout the project but manage to sort them out, the list below are some of the issues I had throughout the project, ther are many more which I didn't screenshot along the way.
+| Notes | Screenshot |
+| --- | --- |
+| Issue with the colorama, Module not found error, I imported colorama but didn't add pip3 freeze, that was solved when I added that in | ![screenshot](documentation/bug/pip-bug.png) |
+| had issue with waist to hip ratio, with male or female choice when user doesnt pick male or female an error does not occur so I change it around and move to chosing genderbafter inputting waist and hip. It work out better | ![screenshot](documentation/bug/gender-bug.png) | 
 
 ## Unfixed Bugs
 > [!NOTE]  
