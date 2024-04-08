@@ -257,7 +257,8 @@ You can fork this repository by using the following steps:
 | [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | Colormama for the text |
 | [Code-Institute](https://codeinstitute.net/ie/) | Understanding???? |
 | [Doctor Diary](https://github.com/Tony118g/doctor-diary/tree/main) | Love Sandwiches |
-| [NHS](https://www.nhs.uk/health-assessment-tools/) | Tools for |
+| [NHS](https://www.nhs.uk/health-assessment-tools/) | Tools for the health assessment |
+| [Stack Flow](https://stackoverflow.com/) | Issues with python code |
 
 ### Media
 

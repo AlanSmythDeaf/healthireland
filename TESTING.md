@@ -25,6 +25,8 @@ I had 238 issues, most of the issues were repetitive as I scroll down to all the
 - W292 no newline at end of file
     - Solve the issue by adding blank line after the end of the file
 
+No errors found after solving all the problem. Their were two issue that didn't understand at first, "Solve the issue by removing the whitespace in the blank line" & "Solve the issue by removing trailing white space". I couldn't see anything but when I google up and highlighted, I could see the issue.
+
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
